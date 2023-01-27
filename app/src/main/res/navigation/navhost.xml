@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navhost"
+    app:startDestination="@id/hospitalList">
+
+    <fragment
+        android:id="@+id/hospitalList"
+        android:name="com.example.hospital.HospitalListFragment"
+        android:label="fragment_hospital_list"
+        tools:layout="@layout/fragment_hospital_list" >
+        <action
+            android:id="@+id/action_hospitalList_to_addHospitalDetailsFragment2"
+            app:destination="@id/addHospitalDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addHospitalDetailsFragment"
+        android:name="com.example.hospital.AddHospitalDetailsFragment"
+        android:label="fragment_add_hospital_details"
+        tools:layout="@layout/fragment_add_hospital_details" >
+        <action
+            android:id="@+id/action_addHospitalDetailsFragment_to_hospitalList2"
+            app:destination="@id/hospitalList" />
+    </fragment>
+</navigation>
